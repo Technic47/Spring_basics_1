@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "eb69646c-da59-41b2-8ec3-1b14c9c4df68",
+		"name": "Spring basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25312518"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Get Demo students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/student/toGroup?studentName=Ivan&groupName=group1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"student",
+								"toGroup"
+							],
+							"query": [
+								{
+									"key": "studentName",
+									"value": "Ivan"
+								},
+								{
+									"key": "groupName",
+									"value": "group1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get student by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/student/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"student",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get student by search name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/student/search?studentName=Igor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"student",
+								"search"
+							],
+							"query": [
+								{
+									"key": "studentName",
+									"value": "Igor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test\",\r\n    \"groupName\":\"group1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/student",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Groups",
+			"item": [
+				{
+					"name": "Save group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/group?groupName=group1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"group"
+							],
+							"query": [
+								{
+									"key": "groupName",
+									"value": "group1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/group/group1/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"group",
+								"group1",
+								"students"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
